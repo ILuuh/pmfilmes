@@ -2,9 +2,9 @@
 
 #Altere as variáveis abaixo de acordo com a sua necessidade
 #na variável repositório, prefira a url do repositório baseada em https para nao termos que configurar SSH
-export name='Pedro Henrique Scabelo'
-export email="pedro.scabelo2b2@gmail.com"
-export repositorio="https://github.com/PedroHS05/PM3H3.git";
+export name='Luiz Gustavo Gouvêa de Paula'
+export email="luiz.gouvea2b2@gmail.com"
+export repositorio="https://github.com/ILuuh/pmfilmes.git";
 
 #Daqui pra baixo mexa somente se for realmente necessário ou se souber o que está fazendo :P
 
