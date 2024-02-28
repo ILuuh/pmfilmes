@@ -6,18 +6,30 @@ import 'package:provider/provider.dart';
 class GeneroItemView extends StatelessWidget {
   final Genero genero;
 
-  const GeneroItemView({super.key, required this.genero});
+  const GeneroItemView({
+    super.key,
+    required this.genero,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final vm = Provider.of<GeneroViewModel>(context);
+
     return Container(
       padding: const EdgeInsets.all(4),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(genero.nome),
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.arrow_right),
+            onPressed: () => click(context),
+            icon: Icon(
+              Icons.task_alt,
+              color:
+                  vm.jaSelecionouGenero && vm.generoSelecionado.id == genero.id
+                      ? Colors.green
+                      : Colors.black,
+            ),
           ),
         ],
       ),
@@ -27,7 +39,7 @@ class GeneroItemView extends StatelessWidget {
   void click(BuildContext context) {
     //recupera um GeneroViewModel do provider com o estado
     //compartilhado na aplicacao
-    final vm = Provider.of<GeneroViewModel>(context);
+    final vm = Provider.of<GeneroViewModel>(context, listen: false);
     vm.selecionaGenero(genero);
 
     //fecha a tela atual

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pmfilmes/dominio/widgets/genero_item_view.dart';
 import 'package:pmfilmes/vm/genero_view_model.dart';
+import 'package:pmfilmes/widgets/genero_item_view.dart';
 import 'package:provider/provider.dart';
 
 class GeneroPage extends StatelessWidget {
