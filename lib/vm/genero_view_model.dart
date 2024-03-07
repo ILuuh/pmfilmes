@@ -5,7 +5,7 @@ class GeneroViewModel extends ChangeNotifier {
   final List<Genero> generos;
   Genero? _genero;
 
-  //Genero? significa que a variavel espera receber um objeto do tipo Genro
+  //Genero? significa que a variavel espera receber um objeto do tipo Genero
   //mas tbm aceita que o valor fique nulo
   GeneroViewModel({
     required this.generos,

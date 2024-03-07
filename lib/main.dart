@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pmfilmes/page/filter_page.dart';
 import 'package:pmfilmes/page/genero_page.dart';
+import 'package:pmfilmes/repositorio/ator_repositorio.dart';
 import 'package:pmfilmes/repositorio/genero_repositorio.dart';
+import 'package:pmfilmes/vm/ator_view_model.dart';
 import 'package:pmfilmes/vm/genero_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +21,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => GeneroViewModel(
             generos: GeneroRepositorio.list(),
+          ),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => AtorViewModel(
+            atores: AtoresRepositorio.list(),
           ),
         ),
       ],
